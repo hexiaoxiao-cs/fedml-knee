@@ -14,7 +14,11 @@ In ISBI 2023
 
 Please create a conda environment using the environment.yaml
 
-## 
+## Scripts to run different methods:
+
+All scripts are located in experiments/distributed/segmentation_knee/
+
+
 
 ## Additional Results:
 
