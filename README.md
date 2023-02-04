@@ -18,8 +18,6 @@ Please create a conda environment using the environment.yaml
 
 All scripts are located in experiments/distributed/segmentation_knee/
 
-
-
 ## Additional Results:
 
 Due to the length of the paper, we put additional results [here](Additional_Results.md)
