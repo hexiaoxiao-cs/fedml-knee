@@ -1,0 +1,82 @@
+cluster_541:
+        gpu-worker1: [0,2]
+        gpu-worker2: [0,1]
+        gpu-worker3: [0,1]
+        gpu-worker4: [0,1]
+
+
+# this is used for 4 clients and 1 server training within a single machine which has 4 GPUs
+mapping_config1_5:
+    lambda-server1: [2, 1, 1, 1]
+
+mapping_config2_5:
+    lambda-server1: [0,0,0,0,2, 1, 1, 1]
+
+mapping_config:
+    localhost: [0,0,0,0,0,0,1,1]
+
+mapping_thasos:
+    localhost: [1,0,0,0,1,1,1,1]
+
+mapping_thasos_2:
+    localhost: [0,2,1,1,0,1,0,0]
+
+mapping_mykonos:
+    localhost: [2,1,1,1,0,0,0,0]
+
+mapping_ilab_3:
+    localhost: [1,1,1,1]
+
+mapping_mykonos_one:
+    localhost: [0,0,0,0,0,2,0,0]
+
+mykonos_0_5_7:
+    localhost: [2,0,0,0,0,1,0,1]
+
+mykonos_1_2_3_5:
+    localhost: [0,2,1,1,0,1,0,0]
+
+mykonos_2_3_5_6:
+    localhost: [0,0,2,1,0,1,1,0]
+
+mykonos_4_5_6_7:
+    localhost: [0,0,0,0,2,1,1,1]
+
+hermes_0_1_4_5:
+    localhost: [2,1,0,0,1,1,0,0]
+
+hermes_0_1_2_3:
+    localhost: [2,1,1,1,0,0,0,0]
+
+hermes_1_2_3_6:
+    localhost: [0,2,1,1,0,0,1,0]
+
+hermes_4_5_6_7:
+    localhost: [0,0,0,0,2,1,1,1]
+
+mykonos_5_6_7:
+    localhost: [0,0,0,0,0,2,1,1]
+
+mykonos_1_2_3:
+    localhost: [0,2,1,1,0,0,0,0]
+
+mykonos_0_1_2_6_7:
+    localhost: [2,1,1,0,0,0,1,1]
+
+mykonos_0_1_2_6:
+    localhost: [2,1,1,0,0,0,1,0]
+
+mykonos_0_1_2:
+    localhost: [2,1,1,0,0,0,0,0]
+
+mykonos_5_6_7:
+    localhost: [0,0,0,0,0,2,1,1]
+
+mykonos_1_6_7:
+    localhost: [0,2,0,0,0,0,1,1]
+
+hermes_4_5_6:
+    localhost: [0,0,0,0,2,1,1,0]
+
+mykonos_0_1_4:
+    localhost: [2,1,0,0,1,0,0,0]

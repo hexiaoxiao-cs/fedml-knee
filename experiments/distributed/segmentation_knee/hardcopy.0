@@ -1,0 +1,41 @@
+  File "/research/cbim/vast/xh172/.conda/envs/fedml/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py", line 44, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/research/cbim/vast/xh172/.conda/envs/fedml/lib/python3.7/site-packages/torch/utils/data/dataset.py", line 311, in __getitem__
+    return self.dataset[self.indices[idx]]
+  File "/research/cbim/vast/xh172/FedCV/data_preprocessing/sensetime/dataset.py", line 185, in __getitem__
+    img_sitk = sitk.ReadImage(path_i)
+  File "/research/cbim/vast/xh172/.conda/envs/fedml/lib/python3.7/site-packages/SimpleITK/extra.py", line 346, in ReadImage
+    return reader.Execute()
+  File "/research/cbim/vast/xh172/.conda/envs/fedml/lib/python3.7/site-packages/SimpleITK/SimpleITK.py", line 8015, in Execute
+    return _SimpleITK.ImageFileReader_Execute(self)
+RuntimeError: Exception thrown in SimpleITK ImageFileReader_Execute: /tmp/SimpleITK-build/ITK/Modules/IO/Meta/src/itkMetaImageIO.cxx:101:
+ITK ERROR: MetaImageIO(0x561a84f30ac0): File cannot be read: ../../../data/sensetime/sensetime_100_cases/12567.nii.gz/org.mha for reading.
+Reason: Permission denied
+
+Exception ignored in: <module 'threading' from '/research/cbim/vast/xh172/.conda/envs/fedml/lib/python3.7/threading.py'>
+Traceback (most recent call last):
+  File "/research/cbim/vast/xh172/.conda/envs/fedml/lib/python3.7/threading.py", line 1308, in _shutdown
+    lock.acquire()
+KeyboardInterrupt
+^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^CCtrl-C caught... cleaning up processes
+[proxy:0:0@mykonos.cs.rutgers.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:878): assert (!closed) failed
+[proxy:0:0@mykonos.cs.rutgers.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:77): callback returned error status
+[proxy:0:0@mykonos.cs.rutgers.edu] main (pm/pmiserv/pmip.c:200): demux engine error waiting for event
+[mpiexec@mykonos.cs.rutgers.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:75): one of the processes terminated badly; aborting
+[mpiexec@mykonos.cs.rutgers.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:22): launcher returned error waiting for completion
+[mpiexec@mykonos.cs.rutgers.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:215): launcher returned error waiting for completion
+[mpiexec@mykonos.cs.rutgers.edu] main (ui/mpich/mpiexec.c:336): process manager error waiting for completion
+(fedml) xh172@mykonos:~/FedCV/experiments/distributed/segmentation_knee$ cd dis^C
+(fedml) xh172@mykonos:~/FedCV/experiments/distributed/segmentation_knee$ . ./OAI_semi_sensetime_dis^C
+(fedml) xh172@mykonos:~/FedCV/experiments/distributed/segmentation_knee$ quota
+Disk quotas for user xh172 (uid 85630):
+     Filesystem  blocks   quota   limit   grace   files   quota   limit   grace
+athina.cs.rutgers.edu:/main
+                862219225  1610612736 1610612736          736877       0       0
+(fedml) xh172@mykonos:~/FedCV/experiments/distributed/segmentation_knee$ quota -ls
+(fedml) xh172@mykonos:~/FedCV/experiments/distributed/segmentation_knee$ quota -s
+Disk quotas for user xh172 (uid 85630):
+     Filesystem   space   quota   limit   grace   files   quota   limit   grace
+athina.cs.rutgers.edu:/main
+                   823G   1536G   1536G            737k       0       0
+(fedml) xh172@mykonos:~/FedCV/experiments/distributed/segmentation_knee$

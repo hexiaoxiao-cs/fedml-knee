@@ -1,0 +1,1 @@
+mpirun -np 4 -hostfile ./mpi_host_mykonos python ./main_fedseg.py --model semi_OAI --dataset cardiac_biobank_3d --client_num_in_total 3 --client_num_per_round 3 --batch_size 32 --batch_size_lb 16 --gpu_server_num 1 --gpu_num_per_server 3 --gpu_mapping_key mykonos_1_2_3 --checkname biobank_3d_3machine_clipped --epoch 30 --net_channel 1 --comm_round 30

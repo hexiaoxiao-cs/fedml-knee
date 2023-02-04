@@ -1,0 +1,1 @@
+mpirun -np 2 -hostfile ./mpi_host_file python ./main_fedseg.py --model semi_OAI --dataset sensetime_oai_semi --checkname sensetime_only_w_o_fed --batch_size_lb 1 --client_num_in_total 1 --client_num_per_round 1 --batch_size 2 --epochs 20 --gpu_server_num 1 --gpu_num_per_server 1 --gpu_mapping_file gpu_mapping.yaml --gpu_mapping_key mapping_mykonos_one
