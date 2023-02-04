@@ -10,9 +10,11 @@ Federated Learning has gained popularity among medical institutions since it ena
 
 In ISBI 2023
 
-## Requirements: 
+## Environment Requirements: 
 
 Please create a conda environment using the environment.yaml
+
+## 
 
 ## Additional Results:
 

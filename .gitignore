@@ -22,3 +22,5 @@ data
 /experiments/distributed/segmentation_knee/*/
 
 *.tar
+
+*.csv
